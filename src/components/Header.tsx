@@ -1,6 +1,7 @@
 import React from 'react';
 import { ChefHat, Menu, X } from 'lucide-react';
 import { Translation } from '../translations';
+import logo from '../public/ayoublogo.jpg';
 
 interface HeaderProps {
   currentLang: string;
@@ -18,7 +19,8 @@ export const Header: React.FC<HeaderProps> = ({ currentLang, onLanguageChange, t
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <ChefHat className="h-8 w-8 text-orange-500" />
-            <span className="text-2xl font-bold text-gray-900">CocinaStore</span>
+            <h1 className='text-lg font-bold'>MasterChef Supply</h1>
+            {/* <img src={logo} alt="CocinaStore Logo" className='h-18 w-28' /> */}
           </div>
 
           {/* Desktop Navigation */}
