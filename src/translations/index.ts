@@ -58,6 +58,31 @@ export interface Translation {
     follow: string;
     rights: string;
   };
+  cart: {
+    title: string;
+    items: string;
+    empty: string;
+    emptyDescription: string;
+    continueShopping: string;
+    back: string;
+    summary: string;
+    subtotal: string;
+    shipping: string;
+    freeShipping: string;
+    total: string;
+    proceedToReservation: string;
+    reservationForm: string;
+    name: string;
+    email: string;
+    phone: string;
+    address: string;
+    notes: string;
+    notesPlaceholder: string;
+    submitReservation: string;
+    submitting: string;
+    orderSuccess: string;
+    orderError: string;
+  };
 }
 
 export const translations: Record<string, Translation> = {
@@ -200,6 +225,31 @@ export const translations: Record<string, Translation> = {
       contact: 'Contacto',
       follow: 'Síguenos',
       rights: '© 2025 CocinaStore. Todos los derechos reservados.'
+    },
+    cart: {
+      title: 'Carrito de Compras',
+      items: 'artículos',
+      empty: 'Tu carrito está vacío',
+      emptyDescription: 'Agrega algunos productos para comenzar',
+      continueShopping: 'Continuar Comprando',
+      back: 'Volver a la Tienda',
+      summary: 'Resumen del Pedido',
+      subtotal: 'Subtotal',
+      shipping: 'Envío',
+      freeShipping: 'Gratis',
+      total: 'Total',
+      proceedToReservation: 'Proceder a Reserva',
+      reservationForm: 'Detalles de Reserva',
+      name: 'Nombre Completo',
+      email: 'Correo Electrónico',
+      phone: 'Teléfono',
+      address: 'Dirección',
+      notes: 'Notas Adicionales',
+      notesPlaceholder: 'Solicitudes especiales o instrucciones de entrega...',
+      submitReservation: 'Enviar Reserva',
+      submitting: 'Enviando...',
+      orderSuccess: '¡Reserva enviada exitosamente! Te contactaremos pronto.',
+      orderError: 'Error al enviar la reserva. Por favor intenta de nuevo.'
     }
   },
   en: {
@@ -341,6 +391,31 @@ export const translations: Record<string, Translation> = {
       contact: 'Contact',
       follow: 'Follow Us',
       rights: '© 2025 CocinaStore. All rights reserved.'
+    },
+    cart: {
+      title: 'Shopping Cart',
+      items: 'items',
+      empty: 'Your cart is empty',
+      emptyDescription: 'Add some products to get started',
+      continueShopping: 'Continue Shopping',
+      back: 'Back to Store',
+      summary: 'Order Summary',
+      subtotal: 'Subtotal',
+      shipping: 'Shipping',
+      freeShipping: 'Free',
+      total: 'Total',
+      proceedToReservation: 'Proceed to Reservation',
+      reservationForm: 'Reservation Details',
+      name: 'Full Name',
+      email: 'Email',
+      phone: 'Phone',
+      address: 'Address',
+      notes: 'Additional Notes',
+      notesPlaceholder: 'Any special requests or delivery instructions...',
+      submitReservation: 'Submit Reservation',
+      submitting: 'Submitting...',
+      orderSuccess: 'Reservation submitted successfully! We will contact you soon.',
+      orderError: 'Error submitting reservation. Please try again.'
     }
   }
 };

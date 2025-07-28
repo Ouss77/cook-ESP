@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Utensils, Zap, Award, Package, ShoppingCart, Heart } from 'lucide-react';
 import { Translation } from '../translations';
+import { useCart } from '../context/CartContext';
 
 interface ProductCategoriesProps {
   translation: Translation;
@@ -8,6 +9,7 @@ interface ProductCategoriesProps {
 
 export const ProductCategories: React.FC<ProductCategoriesProps> = ({ translation }) => {
   const [activeCategory, setActiveCategory] = useState('utensils');
+  const { addItem } = useCart();
 
   const categories = [
     {
@@ -45,6 +47,18 @@ export const ProductCategories: React.FC<ProductCategoriesProps> = ({ translatio
   ];
 
   const activeData = categories.find(cat => cat.id === activeCategory);
+
+  const handleAddToCart = (product: any, categoryId: string) => {
+    const priceNumber = parseFloat(product.price.replace('$', ''));
+    addItem({
+      id: `${categoryId}-${product.name.replace(/\s+/g, '-').toLowerCase()}`,
+      name: product.name,
+      description: product.description,
+      price: priceNumber,
+      image: product.image,
+      category: categoryId
+    });
+  };
 
   return (
     <section id="products" className="py-20 bg-gray-50">
@@ -113,7 +127,10 @@ export const ProductCategories: React.FC<ProductCategoriesProps> = ({ translatio
                   <span className="text-2xl font-bold text-orange-600">
                     {product.price}
                   </span>
-                  <button className="flex items-center space-x-2 bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors shadow-md hover:shadow-lg">
+                  <button 
+                    onClick={() => handleAddToCart(product, activeCategory)}
+                    className="flex items-center space-x-2 bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors shadow-md hover:shadow-lg"
+                  >
                     <ShoppingCart className="h-4 w-4" />
                     <span className="text-sm font-medium">Agregar</span>
                   </button>

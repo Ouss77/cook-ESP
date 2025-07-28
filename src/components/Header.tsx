@@ -1,6 +1,8 @@
 import React from 'react';
-import { ChefHat, Menu, X } from 'lucide-react';
+import { ChefHat, Menu, X, ShoppingCart } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { Translation } from '../translations';
+import { useCart } from '../context/CartContext';
 
 interface HeaderProps {
   currentLang: string;
@@ -10,6 +12,8 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ currentLang, onLanguageChange, translation }) => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const navigate = useNavigate();
+  const { state } = useCart();
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
@@ -18,7 +22,12 @@ export const Header: React.FC<HeaderProps> = ({ currentLang, onLanguageChange, t
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <ChefHat className="h-8 w-8 text-orange-500" />
-            <span className="text-2xl font-bold text-gray-900">CocinaStore</span>
+            <button 
+              onClick={() => navigate('/')}
+              className="text-2xl font-bold text-gray-900 hover:text-orange-500 transition-colors"
+            >
+              CocinaStore
+            </button>
           </div>
 
           {/* Desktop Navigation */}
@@ -39,6 +48,19 @@ export const Header: React.FC<HeaderProps> = ({ currentLang, onLanguageChange, t
 
           {/* Language Switcher */}
           <div className="flex items-center space-x-4">
+            {/* Cart Button */}
+            <button
+              onClick={() => navigate('/cart')}
+              className="relative p-2 text-gray-700 hover:text-orange-500 transition-colors"
+            >
+              <ShoppingCart className="h-6 w-6" />
+              {state.itemCount > 0 && (
+                <span className="absolute -top-1 -right-1 bg-orange-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                  {state.itemCount}
+                </span>
+              )}
+            </button>
+
             <div className="flex items-center bg-gray-100 rounded-lg p-1">
               <button
                 onClick={() => onLanguageChange('es')}
@@ -89,6 +111,13 @@ export const Header: React.FC<HeaderProps> = ({ currentLang, onLanguageChange, t
               <a href="#" className="text-gray-700 hover:text-orange-500 transition-colors font-medium">
                 {translation.nav.contact}
               </a>
+              <button
+                onClick={() => navigate('/cart')}
+                className="text-left text-gray-700 hover:text-orange-500 transition-colors font-medium flex items-center"
+              >
+                <ShoppingCart className="h-5 w-5 mr-2" />
+                {translation.cart?.title || 'Cart'} ({state.itemCount})
+              </button>
             </nav>
           </div>
         )}

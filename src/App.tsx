@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { CartProvider } from './context/CartContext';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { ProductCategories } from './components/ProductCategories';
+import { CartPage } from './components/CartPage';
 import { Footer } from './components/Footer';
 import { translations } from './translations';
 
@@ -14,16 +17,29 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      <Header 
-        currentLang={currentLang}
-        onLanguageChange={handleLanguageChange}
-        translation={translation}
-      />
-      <Hero translation={translation} />
-      <ProductCategories translation={translation} />
-      <Footer translation={translation} />
-    </div>
+    <CartProvider>
+      <Router>
+        <div className="min-h-screen bg-white">
+          <Header 
+            currentLang={currentLang}
+            onLanguageChange={handleLanguageChange}
+            translation={translation}
+          />
+          
+          <Routes>
+            <Route path="/" element={
+              <>
+                <Hero translation={translation} />
+                <ProductCategories translation={translation} />
+              </>
+            } />
+            <Route path="/cart" element={<CartPage translation={translation} />} />
+          </Routes>
+          
+          <Footer translation={translation} />
+        </div>
+      </Router>
+    </CartProvider>
   );
 }
 
