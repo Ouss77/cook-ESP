@@ -8,7 +8,7 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ translation }) => {
   return (
-    <section className="relative bg-gradient-to-br from-orange-50 to-red-50 py-20 lg:py-32">
+    <section id="home" className="relative bg-gradient-to-br from-orange-50 to-red-50 py-20 lg:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">

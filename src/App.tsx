@@ -31,6 +31,8 @@ function App() {
               <>
                 <Hero translation={translation} />
                 <ProductCategories translation={translation} />
+                <About translation={translation} />
+                <Contact translation={translation} />
               </>
             } />
             <Route path="/cart" element={<CartPage translation={translation} />} />

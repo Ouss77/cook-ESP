@@ -345,6 +345,101 @@ export const translations: Record<string, Translation> = {
       submitting: 'Enviando...',
       orderSuccess: '¡Reserva enviada exitosamente! Te contactaremos pronto.',
       orderError: 'Error al enviar la reserva. Por favor intenta de nuevo.'
+    },
+    about: {
+      title: 'Sobre Nosotros',
+      description: 'Somos una empresa familiar dedicada a equipar las cocinas más exigentes con productos de la más alta calidad. Nuestra pasión por la cocina nos impulsa a seleccionar cuidadosamente cada producto que ofrecemos.',
+      story: {
+        title: 'Nuestra Historia',
+        paragraph1: 'Fundada en 2010, CocinaStore nació del sueño de hacer accesibles los mejores utensilios de cocina para todos los amantes de la gastronomía. Comenzamos como una pequeña tienda familiar y hemos crecido hasta convertirnos en referente del sector.',
+        paragraph2: 'Trabajamos directamente con fabricantes reconocidos mundialmente para garantizar que cada producto cumpla con nuestros estándares de calidad. Nuestro equipo de expertos prueba personalmente cada artículo antes de incluirlo en nuestro catálogo.',
+        paragraph3: 'Hoy, después de más de una década, seguimos comprometidos con nuestra misión original: ayudar a crear experiencias culinarias excepcionales en cada hogar.'
+      },
+      features: {
+        quality: {
+          title: 'Calidad Premium',
+          description: 'Seleccionamos únicamente productos de marcas reconocidas con los más altos estándares de calidad y durabilidad.'
+        },
+        experience: {
+          title: '15+ Años de Experiencia',
+          description: 'Nuestro equipo cuenta con más de 15 años de experiencia en el sector de equipamiento para cocina.'
+        },
+        delivery: {
+          title: 'Entrega Rápida',
+          description: 'Envío gratuito en pedidos superiores a $50 y entrega express disponible en área metropolitana.'
+        },
+        warranty: {
+          title: 'Garantía Extendida',
+          description: 'Todos nuestros productos incluyen garantía extendida y servicio técnico especializado.'
+        }
+      }
+    },
+    contact: {
+      title: 'Contáctanos',
+      subtitle: 'Estamos aquí para ayudarte a encontrar los productos perfectos para tu cocina. No dudes en contactarnos para cualquier consulta o asesoramiento personalizado.',
+      info: {
+        address: {
+          title: 'Dirección',
+          street: 'Av. Gastronómica 123',
+          city: 'Ciudad de México, CDMX 01234'
+        },
+        phone: {
+          title: 'Teléfono',
+          main: '+52 (55) 1234-5678',
+          whatsapp: 'WhatsApp: +52 (55) 8765-4321'
+        },
+        email: {
+          title: 'Correo Electrónico',
+          sales: 'ventas@cocinastore.com',
+          support: 'soporte@cocinastore.com'
+        },
+        hours: {
+          title: 'Horarios',
+          weekdays: 'Lun - Vie: 9:00 AM - 7:00 PM',
+          weekend: 'Sáb - Dom: 10:00 AM - 6:00 PM'
+        }
+      },
+      form: {
+        title: 'Envíanos un Mensaje',
+        name: 'Nombre Completo',
+        email: 'Correo Electrónico',
+        phone: 'Teléfono',
+        subject: {
+          label: 'Asunto',
+          placeholder: 'Selecciona un tema',
+          options: {
+            general: 'Consulta General',
+            products: 'Información de Productos',
+            support: 'Soporte Técnico',
+            wholesale: 'Ventas al Por Mayor'
+          }
+        },
+        message: 'Mensaje',
+        messagePlaceholder: 'Cuéntanos cómo podemos ayudarte...',
+        send: 'Enviar Mensaje',
+        sending: 'Enviando...',
+        success: {
+          title: '¡Mensaje Enviado!',
+          message: 'Gracias por contactarnos. Te responderemos dentro de las próximas 24 horas.',
+          sendAnother: 'Enviar otro mensaje'
+        }
+      },
+      visit: {
+        title: 'Visita Nuestra Tienda',
+        description: 'Te invitamos a conocer nuestro showroom donde podrás ver, tocar y probar nuestros productos antes de comprar. Nuestro equipo de expertos estará encantado de asesorarte.',
+        directions: {
+          title: 'Cómo Llegar',
+          metro: 'Metro: Estación Cocina (Línea 3)',
+          bus: 'Autobús: Rutas 45, 67, 89',
+          parking: 'Estacionamiento gratuito disponible'
+        },
+        services: {
+          title: 'Servicios en Tienda',
+          consultation: 'Consultoría personalizada gratuita',
+          demo: 'Demostraciones de productos',
+          installation: 'Servicio de instalación'
+        }
+      }
     }
   },
   en: {
@@ -511,6 +606,101 @@ export const translations: Record<string, Translation> = {
       submitting: 'Submitting...',
       orderSuccess: 'Reservation submitted successfully! We will contact you soon.',
       orderError: 'Error submitting reservation. Please try again.'
+    },
+    about: {
+      title: 'About Us',
+      description: 'We are a family business dedicated to equipping the most demanding kitchens with the highest quality products. Our passion for cooking drives us to carefully select each product we offer.',
+      story: {
+        title: 'Our Story',
+        paragraph1: 'Founded in 2010, CocinaStore was born from the dream of making the best kitchen utensils accessible to all gastronomy lovers. We started as a small family store and have grown to become a reference in the sector.',
+        paragraph2: 'We work directly with world-renowned manufacturers to ensure that each product meets our quality standards. Our team of experts personally tests each item before including it in our catalog.',
+        paragraph3: 'Today, after more than a decade, we remain committed to our original mission: helping to create exceptional culinary experiences in every home.'
+      },
+      features: {
+        quality: {
+          title: 'Premium Quality',
+          description: 'We select only products from recognized brands with the highest standards of quality and durability.'
+        },
+        experience: {
+          title: '15+ Years Experience',
+          description: 'Our team has more than 15 years of experience in the kitchen equipment sector.'
+        },
+        delivery: {
+          title: 'Fast Delivery',
+          description: 'Free shipping on orders over $50 and express delivery available in metropolitan area.'
+        },
+        warranty: {
+          title: 'Extended Warranty',
+          description: 'All our products include extended warranty and specialized technical service.'
+        }
+      }
+    },
+    contact: {
+      title: 'Contact Us',
+      subtitle: 'We are here to help you find the perfect products for your kitchen. Do not hesitate to contact us for any consultation or personalized advice.',
+      info: {
+        address: {
+          title: 'Address',
+          street: '123 Culinary Avenue',
+          city: 'New York, NY 10001'
+        },
+        phone: {
+          title: 'Phone',
+          main: '+1 (555) 123-4567',
+          whatsapp: 'WhatsApp: +1 (555) 765-4321'
+        },
+        email: {
+          title: 'Email',
+          sales: 'sales@cocinastore.com',
+          support: 'support@cocinastore.com'
+        },
+        hours: {
+          title: 'Hours',
+          weekdays: 'Mon - Fri: 9:00 AM - 7:00 PM',
+          weekend: 'Sat - Sun: 10:00 AM - 6:00 PM'
+        }
+      },
+      form: {
+        title: 'Send us a Message',
+        name: 'Full Name',
+        email: 'Email',
+        phone: 'Phone',
+        subject: {
+          label: 'Subject',
+          placeholder: 'Select a topic',
+          options: {
+            general: 'General Inquiry',
+            products: 'Product Information',
+            support: 'Technical Support',
+            wholesale: 'Wholesale Sales'
+          }
+        },
+        message: 'Message',
+        messagePlaceholder: 'Tell us how we can help you...',
+        send: 'Send Message',
+        sending: 'Sending...',
+        success: {
+          title: 'Message Sent!',
+          message: 'Thank you for contacting us. We will respond within the next 24 hours.',
+          sendAnother: 'Send another message'
+        }
+      },
+      visit: {
+        title: 'Visit Our Store',
+        description: 'We invite you to visit our showroom where you can see, touch and try our products before buying. Our team of experts will be happy to advise you.',
+        directions: {
+          title: 'How to Get There',
+          metro: 'Subway: Kitchen Station (Line 3)',
+          bus: 'Bus: Routes 45, 67, 89',
+          parking: 'Free parking available'
+        },
+        services: {
+          title: 'In-Store Services',
+          consultation: 'Free personalized consultation',
+          demo: 'Product demonstrations',
+          installation: 'Installation service'
+        }
+      }
     }
   }
 };
