@@ -8,7 +8,7 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ translation }) => {
   return (
-    <section className="relative bg-gradient-to-br from-orange-50 to-red-50 py-12">
+    <section id="home" className="relative bg-gradient-to-br from-orange-50 to-red-50 py-20 lg:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
@@ -19,13 +19,10 @@ export const Hero: React.FC<HeroProps> = ({ translation }) => {
               {translation.hero.subtitle}
             </p>
             <div className="mt-8">
-              <a href="#products">
-                              <button className="inline-flex items-center px-8 py-4 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200">
+              <button className="inline-flex items-center px-8 py-4 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200">
                 {translation.hero.cta}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              </a>
-
             </div>
           </div>
           

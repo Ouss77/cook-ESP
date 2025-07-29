@@ -32,16 +32,16 @@ export const Header: React.FC<HeaderProps> = ({ currentLang, onLanguageChange, t
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-gray-700 hover:text-orange-500 transition-colors font-medium">
+            <a href="#home" className="text-gray-700 hover:text-orange-500 transition-colors font-medium">
               {translation.nav.home}
             </a>
             <a href="#products" className="text-gray-700 hover:text-orange-500 transition-colors font-medium">
               {translation.nav.products}
             </a>
-            <a href="#" className="text-gray-700 hover:text-orange-500 transition-colors font-medium">
+            <a href="#about" className="text-gray-700 hover:text-orange-500 transition-colors font-medium">
               {translation.nav.about}
             </a>
-            <a href="#" className="text-gray-700 hover:text-orange-500 transition-colors font-medium">
+            <a href="#contact" className="text-gray-700 hover:text-orange-500 transition-colors font-medium">
               {translation.nav.contact}
             </a>
           </nav>
@@ -99,16 +99,16 @@ export const Header: React.FC<HeaderProps> = ({ currentLang, onLanguageChange, t
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col space-y-4">
-              <a href="#" className="text-gray-700 hover:text-orange-500 transition-colors font-medium">
+              <a href="#home" className="text-gray-700 hover:text-orange-500 transition-colors font-medium">
                 {translation.nav.home}
               </a>
               <a href="#products" className="text-gray-700 hover:text-orange-500 transition-colors font-medium">
                 {translation.nav.products}
               </a>
-              <a href="#" className="text-gray-700 hover:text-orange-500 transition-colors font-medium">
+              <a href="#about" className="text-gray-700 hover:text-orange-500 transition-colors font-medium">
                 {translation.nav.about}
               </a>
-              <a href="#" className="text-gray-700 hover:text-orange-500 transition-colors font-medium">
+              <a href="#contact" className="text-gray-700 hover:text-orange-500 transition-colors font-medium">
                 {translation.nav.contact}
               </a>
               <button
