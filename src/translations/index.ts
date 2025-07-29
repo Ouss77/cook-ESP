@@ -83,6 +83,101 @@ export interface Translation {
     orderSuccess: string;
     orderError: string;
   };
+  about: {
+    title: string;
+    description: string;
+    story: {
+      title: string;
+      paragraph1: string;
+      paragraph2: string;
+      paragraph3: string;
+    };
+    features: {
+      quality: {
+        title: string;
+        description: string;
+      };
+      experience: {
+        title: string;
+        description: string;
+      };
+      delivery: {
+        title: string;
+        description: string;
+      };
+      warranty: {
+        title: string;
+        description: string;
+      };
+    };
+  };
+  contact: {
+    title: string;
+    subtitle: string;
+    info: {
+      address: {
+        title: string;
+        street: string;
+        city: string;
+      };
+      phone: {
+        title: string;
+        main: string;
+        whatsapp: string;
+      };
+      email: {
+        title: string;
+        sales: string;
+        support: string;
+      };
+      hours: {
+        title: string;
+        weekdays: string;
+        weekend: string;
+      };
+    };
+    form: {
+      title: string;
+      name: string;
+      email: string;
+      phone: string;
+      subject: {
+        label: string;
+        placeholder: string;
+        options: {
+          general: string;
+          products: string;
+          support: string;
+          wholesale: string;
+        };
+      };
+      message: string;
+      messagePlaceholder: string;
+      send: string;
+      sending: string;
+      success: {
+        title: string;
+        message: string;
+        sendAnother: string;
+      };
+    };
+    visit: {
+      title: string;
+      description: string;
+      directions: {
+        title: string;
+        metro: string;
+        bus: string;
+        parking: string;
+      };
+      services: {
+        title: string;
+        consultation: string;
+        demo: string;
+        installation: string;
+      };
+    };
+  };
 }
 
 export const translations: Record<string, Translation> = {
