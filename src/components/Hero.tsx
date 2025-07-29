@@ -19,10 +19,13 @@ export const Hero: React.FC<HeroProps> = ({ translation }) => {
               {translation.hero.subtitle}
             </p>
             <div className="mt-8">
-              <button className="inline-flex items-center px-8 py-4 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200">
+              <a href="#products">
+                              <button className="inline-flex items-center px-8 py-4 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200">
                 {translation.hero.cta}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
+              </a>
+
             </div>
           </div>
           
