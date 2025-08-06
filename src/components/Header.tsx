@@ -3,7 +3,7 @@ import { ChefHat, Menu, X, ShoppingCart } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Translation } from '../translations';
 import { useCart } from '../context/CartContext';
-
+import logo from '../public/new3.png'; // Assuming you have a logo image
 interface HeaderProps {
   currentLang: string;
   onLanguageChange: (lang: string) => void;
@@ -21,12 +21,27 @@ export const Header: React.FC<HeaderProps> = ({ currentLang, onLanguageChange, t
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <ChefHat className="h-8 w-8 text-orange-500" />
+            {/* <ChefHat className="h-8 w-8 text-orange-500" /> */}
             <button 
               onClick={() => navigate('/')}
-              className="text-2xl font-bold text-gray-900 hover:text-orange-500 transition-colors"
+              className="text-2xl font-bold flex text-gray-900 hover:text-orange-500 transition-colors"
             >
-              CocinaStore
+<div className="relative inline-block w-[120px] h-16">
+  <img 
+    src={logo} 
+    alt="Masterchef Supply Logo" 
+    className="absolute inset-0 w-full h-full object-contain"
+  />
+  <span 
+    className="relative z-10 font-dancing text-lg tracking-tight 
+               block"
+    style={{ top: '-1px', left: '40px', position: 'relative', userSelect: 'none', textShadow: '0 0 4px rgba(254, 98, 7, 0.7)' }}
+  >
+    Masterchef Supply
+  </span>
+</div>
+
+
             </button>
           </div>
 
@@ -60,7 +75,7 @@ export const Header: React.FC<HeaderProps> = ({ currentLang, onLanguageChange, t
                 </span>
               )}
             </button>
-
+{/* 
             <div className="flex items-center bg-gray-100 rounded-lg p-1">
               <button
                 onClick={() => onLanguageChange('es')}
@@ -83,7 +98,7 @@ export const Header: React.FC<HeaderProps> = ({ currentLang, onLanguageChange, t
               >
                 EN
               </button>
-            </div>
+            </div> */}
 
             {/* Mobile menu button */}
             <button

@@ -13,7 +13,34 @@ export interface Translation {
   categories: {
     title: string;
     viewAll: string;
-    viewLess: string;
+  };
+  about: {
+    title: string;
+    description: string;
+    story: {
+      title: string;
+      paragraph1: string;
+      paragraph2: string;
+      paragraph3: string;
+    };
+    features: {
+      quality: {
+        title: string;
+        description: string;
+      };
+      experience: {
+        title: string;
+        description: string;
+      };
+      delivery: {
+        title: string;
+        description: string;
+      };
+      warranty: {
+        title: string;
+        description: string;
+      };
+    };
   };
   products: {
     utensils: {
@@ -51,65 +78,6 @@ export interface Translation {
         price: string;
         image: string;
       }>;
-    };
-  };
-  footer: {
-    about: string;
-    contact: string;
-    follow: string;
-    rights: string;
-  };
-  cart: {
-    title: string;
-    items: string;
-    empty: string;
-    emptyDescription: string;
-    continueShopping: string;
-    back: string;
-    summary: string;
-    subtotal: string;
-    shipping: string;
-    freeShipping: string;
-    total: string;
-    proceedToReservation: string;
-    reservationForm: string;
-    name: string;
-    email: string;
-    phone: string;
-    address: string;
-    notes: string;
-    notesPlaceholder: string;
-    submitReservation: string;
-    submitting: string;
-    orderSuccess: string;
-    orderError: string;
-  };
-  about: {
-    title: string;
-    description: string;
-    story: {
-      title: string;
-      paragraph1: string;
-      paragraph2: string;
-      paragraph3: string;
-    };
-    features: {
-      quality: {
-        title: string;
-        description: string;
-      };
-      experience: {
-        title: string;
-        description: string;
-      };
-      delivery: {
-        title: string;
-        description: string;
-      };
-      warranty: {
-        title: string;
-        description: string;
-      };
     };
   };
   contact: {
@@ -179,6 +147,38 @@ export interface Translation {
       };
     };
   };
+  footer: {
+    about: string;
+    contact: string;
+    follow: string;
+    rights: string;
+    signature: string;
+  };
+  cart: {
+    title: string;
+    items: string;
+    empty: string;
+    emptyDescription: string;
+    continueShopping: string;
+    back: string;
+    summary: string;
+    subtotal: string;
+    shipping: string;
+    freeShipping: string;
+    total: string;
+    proceedToReservation: string;
+    reservationForm: string;
+    name: string;
+    email: string;
+    phone: string;
+    address: string;
+    notes: string;
+    notesPlaceholder: string;
+    submitReservation: string;
+    submitting: string;
+    orderSuccess: string;
+    orderError: string;
+  };
 }
 
 export const translations: Record<string, Translation> = {
@@ -196,8 +196,35 @@ export const translations: Record<string, Translation> = {
     },
     categories: {
       title: 'Nuestras Categorías',
-      viewAll: 'Ver Todos',
-      viewLess: 'Ver Menos'
+      viewAll: 'Ver Todos'
+    },
+    about: {
+      title: 'Sobre Nosotros',
+      description: 'En CocinaStore, nos apasiona ayudarte a crear experiencias culinarias excepcionales. Ofrecemos productos de alta calidad que transforman cada momento en la cocina en algo especial.',
+      story: {
+        title: 'Nuestra Historia',
+        paragraph1: 'Fundada en 2015, CocinaStore nació de la pasión por la cocina y el deseo de hacer que los mejores utensilios y equipos estén al alcance de todos los hogares.',
+        paragraph2: 'Trabajamos directamente con fabricantes de renombre mundial para garantizar que cada producto que ofrecemos cumple con los más altos estándares de calidad y durabilidad.',
+        paragraph3: 'Hoy, somos el destino preferido de miles de cocineros, tanto aficionados como profesionales, que confían en nosotros para equipar sus cocinas con lo mejor.'
+      },
+      features: {
+        quality: {
+          title: 'Calidad Premium',
+          description: 'Seleccionamos cuidadosamente cada producto para garantizar la máxima calidad y durabilidad en tu cocina.'
+        },
+        experience: {
+          title: 'Experiencia',
+          description: 'Más de 10 años ayudando a los amantes de la cocina a encontrar las herramientas perfectas para sus creaciones.'
+        },
+        delivery: {
+          title: 'Entrega Rápida',
+          description: 'Envío gratuito y entrega en 24-48 horas para que puedas disfrutar de tus productos cuanto antes.'
+        },
+        warranty: {
+          title: 'Garantía Total',
+          description: 'Todos nuestros productos incluyen garantía completa y servicio de atención al cliente excepcional.'
+        }
+      }
     },
     products: {
       utensils: {
@@ -517,7 +544,8 @@ items: [
       about: 'Sobre Nosotros',
       contact: 'Contacto',
       follow: 'Síguenos',
-      rights: '© 2025 CocinaStore. Todos los derechos reservados.'
+      rights: '© 2025 CocinaStore. Todos los derechos reservados.',
+      signature: 'Creado con ❤️ por Oussama Sassour'
     },
     cart: {
       title: 'Carrito de Compras',
@@ -544,97 +572,69 @@ items: [
       orderSuccess: '¡Reserva enviada exitosamente! Te contactaremos pronto.',
       orderError: 'Error al enviar la reserva. Por favor intenta de nuevo.'
     },
-    about: {
-      title: 'Sobre Nosotros',
-      description: 'Somos una empresa familiar dedicada a equipar las cocinas más exigentes con productos de la más alta calidad. Nuestra pasión por la cocina nos impulsa a seleccionar cuidadosamente cada producto que ofrecemos.',
-      story: {
-        title: 'Nuestra Historia',
-        paragraph1: 'Fundada en 2010, CocinaStore nació del sueño de hacer accesibles los mejores utensilios de cocina para todos los amantes de la gastronomía. Comenzamos como una pequeña tienda familiar y hemos crecido hasta convertirnos en referente del sector.',
-        paragraph2: 'Trabajamos directamente con fabricantes reconocidos mundialmente para garantizar que cada producto cumpla con nuestros estándares de calidad. Nuestro equipo de expertos prueba personalmente cada artículo antes de incluirlo en nuestro catálogo.',
-        paragraph3: 'Hoy, después de más de una década, seguimos comprometidos con nuestra misión original: ayudar a crear experiencias culinarias excepcionales en cada hogar.'
-      },
-      features: {
-        quality: {
-          title: 'Calidad Premium',
-          description: 'Seleccionamos únicamente productos de marcas reconocidas con los más altos estándares de calidad y durabilidad.'
-        },
-        experience: {
-          title: '15+ Años de Experiencia',
-          description: 'Nuestro equipo cuenta con más de 15 años de experiencia en el sector de equipamiento para cocina.'
-        },
-        delivery: {
-          title: 'Entrega Rápida',
-          description: 'Envío gratuito en pedidos superiores a $50 y entrega express disponible en área metropolitana.'
-        },
-        warranty: {
-          title: 'Garantía Extendida',
-          description: 'Todos nuestros productos incluyen garantía extendida y servicio técnico especializado.'
-        }
-      }
-    },
     contact: {
-      title: 'Contáctanos',
-      subtitle: 'Estamos aquí para ayudarte a encontrar los productos perfectos para tu cocina. No dudes en contactarnos para cualquier consulta o asesoramiento personalizado.',
+      title: 'Contacto',
+      subtitle: 'Estamos aquí para ayudarte. Ponte en contacto con nosotros para cualquier consulta o solicita una demostración personalizada.',
       info: {
         address: {
           title: 'Dirección',
-          street: 'Av. Gastronómica 123',
-          city: 'Ciudad de México, CDMX 01234'
+          street: '123 Calle de la Cocina',
+          city: 'Madrid, España 28001'
         },
         phone: {
           title: 'Teléfono',
-          main: '+52 (55) 1234-5678',
-          whatsapp: 'WhatsApp: +52 (55) 8765-4321'
+          main: '+212648718929',
+          whatsapp: '+212648718929'
         },
         email: {
-          title: 'Correo Electrónico',
-          sales: 'ventas@cocinastore.com',
-          support: 'soporte@cocinastore.com'
+          title: 'Email',
+          sales: 'Masterchefsupply@gmail.com',
+          support: 'Masterchefsupply@gmail.com'
         },
         hours: {
           title: 'Horarios',
-          weekdays: 'Lun - Vie: 9:00 AM - 7:00 PM',
-          weekend: 'Sáb - Dom: 10:00 AM - 6:00 PM'
+          weekdays: 'Lun - Vie: 9:00 - 19:00',
+          weekend: 'Sáb - Dom: 10:00 - 18:00'
         }
       },
       form: {
         title: 'Envíanos un Mensaje',
-        name: 'Nombre Completo',
+        name: 'Nombre',
         email: 'Correo Electrónico',
         phone: 'Teléfono',
         subject: {
           label: 'Asunto',
-          placeholder: 'Selecciona un tema',
+          placeholder: 'Selecciona un asunto',
           options: {
             general: 'Consulta General',
-            products: 'Información de Productos',
+            products: 'Productos',
             support: 'Soporte Técnico',
             wholesale: 'Ventas al Por Mayor'
           }
         },
         message: 'Mensaje',
-        messagePlaceholder: 'Cuéntanos cómo podemos ayudarte...',
+        messagePlaceholder: 'Escribe tu mensaje aquí...',
         send: 'Enviar Mensaje',
         sending: 'Enviando...',
         success: {
           title: '¡Mensaje Enviado!',
-          message: 'Gracias por contactarnos. Te responderemos dentro de las próximas 24 horas.',
+          message: 'Gracias por contactarnos. Responderemos a tu mensaje dentro de 24 horas.',
           sendAnother: 'Enviar otro mensaje'
         }
       },
       visit: {
         title: 'Visita Nuestra Tienda',
-        description: 'Te invitamos a conocer nuestro showroom donde podrás ver, tocar y probar nuestros productos antes de comprar. Nuestro equipo de expertos estará encantado de asesorarte.',
+        description: 'Ven a conocer nuestros productos en persona. Nuestro equipo de expertos te ayudará a encontrar exactamente lo que necesitas para tu cocina.',
         directions: {
           title: 'Cómo Llegar',
-          metro: 'Metro: Estación Cocina (Línea 3)',
-          bus: 'Autobús: Rutas 45, 67, 89',
-          parking: 'Estacionamiento gratuito disponible'
+          metro: 'Metro: Línea 3, estación Gran Vía',
+          bus: 'Autobús: Líneas 46, 74, 133',
+          parking: 'Aparcamiento disponible en los alrededores'
         },
         services: {
-          title: 'Servicios en Tienda',
-          consultation: 'Consultoría personalizada gratuita',
-          demo: 'Demostraciones de productos',
+          title: 'Servicios Disponibles',
+          consultation: 'Consulta personalizada gratuita',
+          demo: 'Demostración de productos',
           installation: 'Servicio de instalación'
         }
       }
@@ -654,8 +654,35 @@ items: [
     },
     categories: {
       title: 'Our Categories',
-      viewAll: 'View All',
-      viewLess: 'View Less'
+      viewAll: 'View All'
+    },
+    about: {
+      title: 'About Us',
+      description: 'At CocinaStore, we\'re passionate about helping you create exceptional culinary experiences. We offer high-quality products that transform every moment in the kitchen into something special.',
+      story: {
+        title: 'Our Story',
+        paragraph1: 'Founded in 2015, CocinaStore was born from a passion for cooking and the desire to make the best utensils and equipment accessible to all homes.',
+        paragraph2: 'We work directly with world-renowned manufacturers to ensure that every product we offer meets the highest standards of quality and durability.',
+        paragraph3: 'Today, we are the preferred destination for thousands of cooks, both amateur and professional, who trust us to equip their kitchens with the best.'
+      },
+      features: {
+        quality: {
+          title: 'Premium Quality',
+          description: 'We carefully select each product to guarantee maximum quality and durability in your kitchen.'
+        },
+        experience: {
+          title: 'Experience',
+          description: 'More than 10 years helping cooking enthusiasts find the perfect tools for their creations.'
+        },
+        delivery: {
+          title: 'Fast Delivery',
+          description: 'Free shipping and delivery in 24-48 hours so you can enjoy your products as soon as possible.'
+        },
+        warranty: {
+          title: 'Full Warranty',
+          description: 'All our products include full warranty and exceptional customer service.'
+        }
+      }
     },
     products: {
       utensils: {
@@ -779,7 +806,8 @@ items: [
       about: 'About Us',
       contact: 'Contact',
       follow: 'Follow Us',
-      rights: '© 2025 CocinaStore. All rights reserved.'
+      rights: '© 2025 CocinaStore. All rights reserved.',
+      signature: 'Made with ❤️ by Oussama Sassour'
     },
     cart: {
       title: 'Shopping Cart',
@@ -806,47 +834,19 @@ items: [
       orderSuccess: 'Reservation submitted successfully! We will contact you soon.',
       orderError: 'Error submitting reservation. Please try again.'
     },
-    about: {
-      title: 'About Us',
-      description: 'We are a family business dedicated to equipping the most demanding kitchens with the highest quality products. Our passion for cooking drives us to carefully select each product we offer.',
-      story: {
-        title: 'Our Story',
-        paragraph1: 'Founded in 2010, CocinaStore was born from the dream of making the best kitchen utensils accessible to all gastronomy lovers. We started as a small family store and have grown to become a reference in the sector.',
-        paragraph2: 'We work directly with world-renowned manufacturers to ensure that each product meets our quality standards. Our team of experts personally tests each item before including it in our catalog.',
-        paragraph3: 'Today, after more than a decade, we remain committed to our original mission: helping to create exceptional culinary experiences in every home.'
-      },
-      features: {
-        quality: {
-          title: 'Premium Quality',
-          description: 'We select only products from recognized brands with the highest standards of quality and durability.'
-        },
-        experience: {
-          title: '15+ Years Experience',
-          description: 'Our team has more than 15 years of experience in the kitchen equipment sector.'
-        },
-        delivery: {
-          title: 'Fast Delivery',
-          description: 'Free shipping on orders over $50 and express delivery available in metropolitan area.'
-        },
-        warranty: {
-          title: 'Extended Warranty',
-          description: 'All our products include extended warranty and specialized technical service.'
-        }
-      }
-    },
     contact: {
       title: 'Contact Us',
-      subtitle: 'We are here to help you find the perfect products for your kitchen. Do not hesitate to contact us for any consultation or personalized advice.',
+      subtitle: 'We\'re here to help you. Get in touch with us for any inquiries or request a personalized demonstration.',
       info: {
         address: {
           title: 'Address',
-          street: '123 Culinary Avenue',
+          street: '123 Kitchen Street',
           city: 'New York, NY 10001'
         },
         phone: {
           title: 'Phone',
           main: '+1 (555) 123-4567',
-          whatsapp: 'WhatsApp: +1 (555) 765-4321'
+          whatsapp: '+1 (555) 987-6543'
         },
         email: {
           title: 'Email',
@@ -861,42 +861,42 @@ items: [
       },
       form: {
         title: 'Send us a Message',
-        name: 'Full Name',
+        name: 'Name',
         email: 'Email',
         phone: 'Phone',
         subject: {
           label: 'Subject',
-          placeholder: 'Select a topic',
+          placeholder: 'Select a subject',
           options: {
             general: 'General Inquiry',
-            products: 'Product Information',
+            products: 'Products',
             support: 'Technical Support',
-            wholesale: 'Wholesale Sales'
+            wholesale: 'Wholesale'
           }
         },
         message: 'Message',
-        messagePlaceholder: 'Tell us how we can help you...',
+        messagePlaceholder: 'Write your message here...',
         send: 'Send Message',
         sending: 'Sending...',
         success: {
           title: 'Message Sent!',
-          message: 'Thank you for contacting us. We will respond within the next 24 hours.',
+          message: 'Thank you for contacting us. We\'ll respond to your message within 24 hours.',
           sendAnother: 'Send another message'
         }
       },
       visit: {
         title: 'Visit Our Store',
-        description: 'We invite you to visit our showroom where you can see, touch and try our products before buying. Our team of experts will be happy to advise you.',
+        description: 'Come see our products in person. Our team of experts will help you find exactly what you need for your kitchen.',
         directions: {
-          title: 'How to Get There',
-          metro: 'Subway: Kitchen Station (Line 3)',
-          bus: 'Bus: Routes 45, 67, 89',
-          parking: 'Free parking available'
+          title: 'How to Get Here',
+          metro: 'Subway: Line 3, Grand Central Station',
+          bus: 'Bus: Lines 46, 74, 133',
+          parking: 'Parking available nearby'
         },
         services: {
-          title: 'In-Store Services',
+          title: 'Available Services',
           consultation: 'Free personalized consultation',
-          demo: 'Product demonstrations',
+          demo: 'Product demonstration',
           installation: 'Installation service'
         }
       }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ChefHat, Facebook, Instagram, Twitter } from 'lucide-react';
 import { Translation } from '../translations';
-
+import logo from '../public/new3.png'; // Assuming you have a logo image
 interface FooterProps {
   translation: Translation;
 }
@@ -13,10 +13,11 @@ export const Footer: React.FC<FooterProps> = ({ translation }) => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <ChefHat className="h-8 w-8 text-orange-500" />
-              <span className="text-2xl font-bold">CocinaStore</span>
-            </div>
+            <span 
+    className="relative z-10 font-dancing text-lg text-orange-700 font-bold  tracking-tight         block"
+  >
+    Masterchef Supply
+  </span>
             <p className="text-gray-400 mb-6 max-w-md">
               Tu destino para productos de cocina de alta calidad que transforman cada comida en una experiencia especial.
             </p>
@@ -48,8 +49,8 @@ export const Footer: React.FC<FooterProps> = ({ translation }) => {
           <div>
             <h3 className="text-lg font-semibold mb-4">{translation.footer.contact}</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>Email: info@cocinastore.com</li>
-              <li>Teléfono: +1 (555) 123-4567</li>
+              <li>Email: Masterchefsupply@gmail.com</li>
+              <li>Teléfono: +212648718929</li>
               <li>Dirección: 123 Kitchen St.</li>
               <li>Ciudad, País 12345</li>
             </ul>
@@ -57,7 +58,8 @@ export const Footer: React.FC<FooterProps> = ({ translation }) => {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>{translation.footer.rights}</p>
+          <p className="mb-2">{translation.footer.rights}</p>
+          <p className="text-sm text-gray-500">{translation.footer.signature}</p>
         </div>
       </div>
     </footer>
